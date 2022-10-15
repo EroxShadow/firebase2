@@ -1,0 +1,13 @@
+<input type = "text" [(ngModel)]="studentName" placeholder="Nombre"><br>
+<input type = "text" [(ngModel)]="studentAge" placeholder="Edad"><br>
+<input type = "text" [(ngModel)]="studentAddress" placeholder="Direccion"><br>
+<button type = "button" (click)="createRecord()">Guardar</button>
+
+<div *ngFor="let item of students">
+  <h3>{{item.Data.Name}}</h3><hr>
+  Id:{{item.id}}<br>
+  Edad:{{item.Data.Age}}<br>
+  Direccion:{{item.Data.Address}}<br>
+<button type = "button" (click)="removeRecord(item.id)">Eliminar</button><br>
+
+</div>
